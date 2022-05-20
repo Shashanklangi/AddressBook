@@ -4,14 +4,10 @@ namespace AddressBook
 {
     public class Program
     {
-        public void program()
-        {
-
-        }
         public static void Main(string[] args)
         {
-            var list = new List<AddressBook>();
-            AddressBook address = new AddressBook();
+            var list = new List<ContactDetails>();
+            ContactDetails address = new ContactDetails();
 
             Console.WriteLine(" Welcome to the Address Book ");
 
