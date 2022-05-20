@@ -8,7 +8,7 @@ namespace AddressBook
 {
     internal class AddressBook
     {
-        public string Firstname { get; set; }
+        public string Firstname;
         public string Lastname;
         public string City;
         public string State;
