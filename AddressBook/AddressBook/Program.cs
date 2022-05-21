@@ -7,7 +7,6 @@ namespace AddressBook
         {
             ContactDetails details = new ContactDetails();
             details.AddDetails();
-            details.Remove();
         }  
     }
 }
