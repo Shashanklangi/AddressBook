@@ -67,72 +67,24 @@ namespace AddressBook
                 j++;
             }
         }
-        public void Edit()
+        public void Remove()
         {
-            Console.WriteLine("\nEnter the FirstName whose data you want to change");
+            Console.WriteLine("\nEnter the FirstName whose data you want to remove");
             string First_Name = Console.ReadLine();
-            Console.WriteLine("\nEnter the LasttName whose data you want to change");
+            Console.WriteLine("\nEnter the LasttName whose data you want to remove");
             string Last_Name = Console.ReadLine();
             for (int i = 0; i < list.Count; i += 8)
             {
                 if ((String.Equals(First_Name, (list[i])) && (String.Equals(Last_Name, (list[i+1] )))))
                 {
-                    Console.WriteLine("Name:" + list + "==" + list[i]);
-                    Console.WriteLine("Press 1: for First name");
-                    Console.WriteLine("Press 2: for Last name");
-                    Console.WriteLine("Press 3: for Email ID");
-                    Console.WriteLine("Press 4: for Address");
-                    Console.WriteLine("Press 5: for City name");
-                    Console.WriteLine("Press 6: for State name");
-                    Console.WriteLine("Press 7: for Zip_Code");
-                    Console.WriteLine("Press 8: for PhoneNumber");
-                    int check = Convert.ToInt32(Console.ReadLine());
-                    switch (check)
-                    {
-                        case 1:
-                            Console.WriteLine("Enter your correct First name");
-                            string FirstName = Console.ReadLine();
-                            list[i] = FirstName;
-                            break;
-                        case 2:
-                            Console.WriteLine("Enter your correct Last name");
-                            string LastName = Console.ReadLine();
-                            list[i + 1] = LastName;
-                            break;
-                        case 3:
-                            Console.WriteLine("Enter your correct Email ID");
-                            string EmailID = Console.ReadLine();
-                            list[i + 2] = EmailID;
-                            break;
-                        case 4:
-                            Console.WriteLine("Enter your correct Address");
-                            string Address = Console.ReadLine();
-                            list[i + 3] = Address;
-                            break;
-                        case 5:
-                            Console.WriteLine("Enter your correct City name");
-                            string City = Console.ReadLine();
-                            list[i + 4] = City;
-                            break;
-                        case 6:
-                            Console.WriteLine("Enter your correct State name");
-                            string State = Console.ReadLine();
-                            list[i + 5] = State;
-                            break;
-                        case 7:
-                            Console.WriteLine("Enter your correct Zip_Code");
-                            string Zip_Code = Console.ReadLine();
-                            list[i + 6] = Zip_Code;
-                            break;
-                        case 8:
-                            Console.WriteLine("Enter your correct PhoneNumber");
-                            string PhoneNumber = Console.ReadLine();
-                            list[i + 7] = PhoneNumber;
-                            break;
-                        default:
-                            Console.WriteLine("Please enter a valid input");
-                            break;
-                    }
+                    list.RemoveAt(i);
+                    list.RemoveAt(i);
+                    list.RemoveAt(i);
+                    list.RemoveAt(i);
+                    list.RemoveAt(i);
+                    list.RemoveAt(i);
+                    list.RemoveAt(i);
+                    list.RemoveAt(i);
                 }
 
             }
