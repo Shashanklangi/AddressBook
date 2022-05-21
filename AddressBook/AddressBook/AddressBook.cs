@@ -67,7 +67,7 @@ namespace AddressBook
                 j++;
             }
         }
-        public void Change()
+        public void Edit()
         {
             Console.WriteLine("\nEnter the FirstName whose data you want to change");
             string First_Name = Console.ReadLine();
@@ -152,9 +152,7 @@ namespace AddressBook
                     Console.WriteLine("State Name: " + list[j + 5]);
                     Console.WriteLine("ZIP Number:" + list[j + 6]);
                     Console.WriteLine("Phone Number:" + list[j + 7]);
-                   
                     count++;
-
                 }
                 j++;
             }

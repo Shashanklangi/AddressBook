@@ -7,7 +7,7 @@ namespace AddressBook
         {
             ContactDetails details = new ContactDetails();
             details.AddDetails();
-            details.Change();
+            details.Edit();
         }  
     }
 }
