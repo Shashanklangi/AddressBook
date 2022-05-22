@@ -10,7 +10,7 @@ namespace AddressBook
     public class ContactDetails
     {
         ArrayList list = new ArrayList();
-        public void AddDetails()
+        public void GetInfo()
         {
             Console.WriteLine("How many person Contact Detail You want to add:");
             int Num = Convert.ToInt32(Console.ReadLine());

@@ -6,7 +6,7 @@ namespace AddressBook
         public static void Main(string[] args)
         {
             ContactDetails details = new ContactDetails();
-            details.AddDetails();
+            details.GetInfo();
         }  
     }
 }
