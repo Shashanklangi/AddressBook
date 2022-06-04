@@ -19,15 +19,16 @@ namespace AddressBook
                 switch (option)
                 {
                     case 1:
-                        FamilyDetails family = new FamilyDetails();                      
+                        FamilyDetails family = new FamilyDetails();
                         do
                         {
                             Console.WriteLine("\n1:To Add a Contact");
                             Console.WriteLine("2:To Edit Contacts");
                             Console.WriteLine("3:To Remove a contact");
+                            Console.WriteLine("4:To Search Person");                 
                             Console.WriteLine("0:To Exit");
                             int select1 = Convert.ToInt32(Console.ReadLine());
-                            {                                
+                            {
                                 switch (select1)
                                 {
                                     case 0:
@@ -38,9 +39,14 @@ namespace AddressBook
                                         continue;
                                     case 2:
                                         family.Edit();
-                                        break;
+                                        continue;
                                     case 3:
                                         family.Remove();
+                                        continue;
+                                    case 4:
+                                        Console.WriteLine("Enter city");
+                                        string city = Console.ReadLine();
+                                        family.SearchPerson(city);
                                         break;
                                     default:
                                         Console.WriteLine("Have a Nice Day");
@@ -73,44 +79,14 @@ namespace AddressBook
                                         continue;
                                     case 2:
                                         friend.Edit();
-                                        break;
+                                        continue;
                                     case 3:
                                         friend.Remove();
-                                        break;
-                                    default:
-                                        Console.WriteLine("Have a Nice Day");
-                                        break;
-                                }
-                                if (select == 1) ;
-                                break;
-                            }
-                        }
-                        while (option != 0);
-                        break;
-
-                    case 3:
-                        OfficeDetails office = new OfficeDetails();
-                        do
-                        {
-                            Console.WriteLine("\n1:To Add a Contact");
-                            Console.WriteLine("2:To Edit Contacts");
-                            Console.WriteLine("3:To Remove a contact");
-                            Console.WriteLine("0:To Exit");
-                            int select3 = Convert.ToInt32(Console.ReadLine());
-                            {                              
-                                switch (select3)
-                                {
-                                    case 0:
-                                        select = 1;
-                                        break;
-                                    case 1:
-                                        office.GetInfo();
                                         continue;
-                                    case 2:
-                                        office.Edit();
-                                        break;
-                                    case 3:
-                                        office.Remove();
+                                    case 4:
+                                        Console.WriteLine("Enter city");
+                                        string city = Console.ReadLine();
+                                        friend.SearchPerson(city);
                                         break;
                                     default:
                                         Console.WriteLine("Have a Nice Day");
@@ -122,12 +98,12 @@ namespace AddressBook
                         }
                         while (option != 0);
                         break;
+                    
                 }
 
             }
 
-        }  
+        }
     }
 }
-
 

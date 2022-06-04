@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf.Collections;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace AddressBook
     public class FriendsDetails
     {
         ArrayList list = new ArrayList();
+        List<ContactDetails> lists = new List<ContactDetails>();
         public void GetInfo()
         {
             Console.WriteLine("How many person Contact Detail You want to add:");
@@ -35,6 +37,9 @@ namespace AddressBook
                 string Zip_Code = Console.ReadLine();
                 Console.WriteLine("Enter your phone number");
                 string PhoneNumber = Console.ReadLine();
+
+                ContactDetails contactDetails = new ContactDetails(First_Name, Last_Name, Address, City, State, Zip_Code, PhoneNumber, EmailID);
+                lists.Add(contactDetails);
 
                 list.Add(First_Name);
                 list.Add(Last_Name);
@@ -194,9 +199,21 @@ namespace AddressBook
                 j++;
             }
         }
+        public void SearchPerson(string city)
+        {
+            var result = lists.FindAll(x => x.City == city);
+            foreach (var item in lists)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                    "\nEmail ID :" + item.EmailId + " " + "\nAddress :" + item.Address + " " +
+                                    "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                    "\nZip Code :" + item.Zipcode + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-----------------------------------------------------------");
+            }
+        }
+
     }
 }
-
 
 
 
