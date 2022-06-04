@@ -11,7 +11,6 @@ namespace AddressBook
                 Console.WriteLine("Select The Option For The Particular Address Book");
                 Console.WriteLine("1: For the Family.");
                 Console.WriteLine("2: For the Friends.");
-                Console.WriteLine("3: For the Office.");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 Program details = new Program();
@@ -25,7 +24,7 @@ namespace AddressBook
                             Console.WriteLine("\n1:To Add a Contact");
                             Console.WriteLine("2:To Edit Contacts");
                             Console.WriteLine("3:To Remove a contact");
-                            Console.WriteLine("4:To Search Person");                 
+                            Console.WriteLine("4:To Search Person");                                
                             Console.WriteLine("0:To Exit");
                             int select1 = Convert.ToInt32(Console.ReadLine());
                             {
@@ -47,7 +46,7 @@ namespace AddressBook
                                         Console.WriteLine("Enter city");
                                         string city = Console.ReadLine();
                                         family.SearchPerson(city);
-                                        break;
+                                        break;                                   
                                     default:
                                         Console.WriteLine("Have a Nice Day");
                                         break;
@@ -66,6 +65,7 @@ namespace AddressBook
                             Console.WriteLine("\n1:To Add a Contact");
                             Console.WriteLine("2:To Edit Contacts");
                             Console.WriteLine("3:To Remove a contact");
+                            Console.WriteLine("4:To Search Person");
                             Console.WriteLine("0:To Exit");
                             int select2 = Convert.ToInt32(Console.ReadLine());
                             {
