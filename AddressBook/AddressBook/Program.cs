@@ -22,9 +22,10 @@ namespace AddressBook
                         do
                         {
                             Console.WriteLine("\n1:To Add a Contact");
-                            Console.WriteLine("2:To Edit Contacts");
-                            Console.WriteLine("3:To Remove a contact");
-                            Console.WriteLine("4:To Search Person");                                
+                            Console.WriteLine("2:To Display");
+                            Console.WriteLine("3:To Edit");
+                            Console.WriteLine("4:To Remove");
+                            Console.WriteLine("5:To Search Person");
                             Console.WriteLine("0:To Exit");
                             int select1 = Convert.ToInt32(Console.ReadLine());
                             {
@@ -37,16 +38,19 @@ namespace AddressBook
                                         family.GetInfo();
                                         continue;
                                     case 2:
-                                        family.Edit();
+                                        family.DisplayContacts();
                                         continue;
                                     case 3:
-                                        family.Remove();
+                                        family.Edit();
                                         continue;
                                     case 4:
+                                        family.Remove();
+                                        continue;
+                                    case 5:
                                         Console.WriteLine("Enter city");
                                         string city = Console.ReadLine();
                                         family.SearchPerson(city);
-                                        break;                                   
+                                        break;
                                     default:
                                         Console.WriteLine("Have a Nice Day");
                                         break;
@@ -63,9 +67,10 @@ namespace AddressBook
                         do
                         {
                             Console.WriteLine("\n1:To Add a Contact");
-                            Console.WriteLine("2:To Edit Contacts");
-                            Console.WriteLine("3:To Remove a contact");
-                            Console.WriteLine("4:To Search Person");
+                            Console.WriteLine("2:To Display");
+                            Console.WriteLine("3:To Edit");
+                            Console.WriteLine("4:To Remove");
+                            Console.WriteLine("5:To Search Person");
                             Console.WriteLine("0:To Exit");
                             int select2 = Convert.ToInt32(Console.ReadLine());
                             {
@@ -78,12 +83,15 @@ namespace AddressBook
                                         friend.GetInfo();
                                         continue;
                                     case 2:
-                                        friend.Edit();
+                                        friend.DisplayContacts();
                                         continue;
                                     case 3:
-                                        friend.Remove();
+                                        friend.Edit();
                                         continue;
                                     case 4:
+                                        friend.Remove();
+                                        continue;
+                                    case 5:
                                         Console.WriteLine("Enter city");
                                         string city = Console.ReadLine();
                                         friend.SearchPerson(city);
@@ -98,7 +106,6 @@ namespace AddressBook
                         }
                         while (option != 0);
                         break;
-                    
                 }
 
             }
