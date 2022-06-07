@@ -26,6 +26,7 @@ namespace AddressBook
                             Console.WriteLine("3:To Edit");
                             Console.WriteLine("4:To Remove");
                             Console.WriteLine("5:To Search Person");
+                            Console.WriteLine("6:To View Person");
                             Console.WriteLine("0:To Exit");
                             int select1 = Convert.ToInt32(Console.ReadLine());
                             {
@@ -50,7 +51,12 @@ namespace AddressBook
                                         Console.WriteLine("Enter city");
                                         string city = Console.ReadLine();
                                         family.SearchPerson(city);
-                                        break;
+                                        continue;
+                                    case 6:
+                                        Console.WriteLine("Enter state");
+                                        string State = Console.ReadLine();
+                                        family.ViewWithState(State);
+                                        continue;
                                     default:
                                         Console.WriteLine("Have a Nice Day");
                                         break;
@@ -71,6 +77,7 @@ namespace AddressBook
                             Console.WriteLine("3:To Edit");
                             Console.WriteLine("4:To Remove");
                             Console.WriteLine("5:To Search Person");
+                            Console.WriteLine("5:To View Person");
                             Console.WriteLine("0:To Exit");
                             int select2 = Convert.ToInt32(Console.ReadLine());
                             {
@@ -95,7 +102,12 @@ namespace AddressBook
                                         Console.WriteLine("Enter city");
                                         string city = Console.ReadLine();
                                         friend.SearchPerson(city);
-                                        break;
+                                        continue;
+                                    case 6:
+                                        Console.WriteLine("Enter state");
+                                        string State = Console.ReadLine();
+                                        friend.ViewWithState(State);
+                                        continue;
                                     default:
                                         Console.WriteLine("Have a Nice Day");
                                         break;

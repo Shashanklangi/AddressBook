@@ -171,6 +171,19 @@ namespace AddressBook
                 Console.WriteLine("-----------------------------------------------------------");
             }
         }
+        public void ViewWithState(string State)
+        {
+            var result = list.FindAll(r => r.State == State);
+            Console.WriteLine("Details of people who live in state :");
+            foreach (var item in result)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                    "\nEmail ID :" + item.EmailId + " " + "\nAddress :" + item.Address + " " +
+                                    "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                    "\nZip Code :" + item.Zipcode + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-----------------------------------------------------------");
+            }
+        }
     }
 }
 
