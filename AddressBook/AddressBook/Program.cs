@@ -57,6 +57,9 @@ namespace AddressBook
                                         string State = Console.ReadLine();
                                         family.ViewWithState(State);
                                         continue;
+                                    case 7:
+                                        family.Countperson();
+                                        continue;
                                     default:
                                         Console.WriteLine("Have a Nice Day");
                                         break;
@@ -107,6 +110,9 @@ namespace AddressBook
                                         Console.WriteLine("Enter state");
                                         string State = Console.ReadLine();
                                         friend.ViewWithState(State);
+                                        continue;
+                                    case 7:
+                                        friend.Countperson();
                                         continue;
                                     default:
                                         Console.WriteLine("Have a Nice Day");

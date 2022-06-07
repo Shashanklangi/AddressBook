@@ -184,6 +184,26 @@ namespace AddressBook
                 Console.WriteLine("-----------------------------------------------------------");
             }
         }
+        public void Countperson()
+        {
+            Console.WriteLine("Count Person-City and state wise:");
+            Console.WriteLine("Enter City");
+            string City = Console.ReadLine();
+            Console.WriteLine("Enter state");
+            string State = Console.ReadLine();
+            var result = list.FindAll(r => (r.City == City && r.State == State));
+            foreach (var item in result)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                    "\nEmail ID :" + item.EmailId + " " + "\nAddress :" + item.Address + " " +
+                                    "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                    "\nZip Code :" + item.Zipcode + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-----------------------------------------------------------");
+            }
+            var results = result.Count;
+            Console.WriteLine("-----------------------------------------------------------");
+            Console.WriteLine($"Total Persons in City: {City} & State: {State}: are " + results);
+        }
     }
 }
 
