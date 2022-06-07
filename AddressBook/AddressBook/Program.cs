@@ -26,7 +26,9 @@ namespace AddressBook
                             Console.WriteLine("3:To Edit");
                             Console.WriteLine("4:To Remove");
                             Console.WriteLine("5:To Search Person");
-                            Console.WriteLine("6:To View Person");
+                            Console.WriteLine("6:To View by City Name");
+                            Console.WriteLine("7:Count Person by City and State");
+                            Console.WriteLine("8:Sort by Person Name");
                             Console.WriteLine("0:To Exit");
                             int select1 = Convert.ToInt32(Console.ReadLine());
                             {
@@ -60,6 +62,9 @@ namespace AddressBook
                                     case 7:
                                         family.Countperson();
                                         continue;
+                                    case 8:
+                                        family.SortByPersonName();
+                                        continue;
                                     default:
                                         Console.WriteLine("Have a Nice Day");
                                         break;
@@ -80,7 +85,9 @@ namespace AddressBook
                             Console.WriteLine("3:To Edit");
                             Console.WriteLine("4:To Remove");
                             Console.WriteLine("5:To Search Person");
-                            Console.WriteLine("5:To View Person");
+                            Console.WriteLine("6:To View by City Name");
+                            Console.WriteLine("7:Count Person by City and State");
+                            Console.WriteLine("8:Sort by person name");
                             Console.WriteLine("0:To Exit");
                             int select2 = Convert.ToInt32(Console.ReadLine());
                             {
@@ -113,6 +120,9 @@ namespace AddressBook
                                         continue;
                                     case 7:
                                         friend.Countperson();
+                                        continue;
+                                    case 8:
+                                        friend.SortByPersonName();
                                         continue;
                                     default:
                                         Console.WriteLine("Have a Nice Day");

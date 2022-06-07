@@ -207,6 +207,18 @@ namespace AddressBook
             Console.WriteLine("-----------------------------------------------------------");
             Console.WriteLine($"Total Persons in City: {City} & State: {State}: are " + results);
         }
+        public void SortByPersonName()
+        {
+            var Sort = list.OrderBy(r => r.FirstName).ToList();
+            foreach (var item in Sort)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                    "\nEmail ID :" + item.EmailId + " " + "\nAddress :" + item.Address + " " +
+                                    "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                    "\nZip Code :" + item.Zipcode + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-----------------------------------------------------------");
+            }
+        }
     }
 }
 
