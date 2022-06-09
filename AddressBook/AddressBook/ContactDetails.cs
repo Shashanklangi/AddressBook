@@ -27,7 +27,13 @@ namespace AddressBook
             this.Zipcode = Zipcode;
             this.PhoneNumber = PhoneNumber;
             this.EmailId = EmailId;
-
+        }
+        public override string ToString()
+        {
+            return "First Name :" + FirstName + " " + "\nLast Name :" + LastName + " " +
+                                    "\nEmail ID :" + EmailId + " " + "\nAddress :" + Address + " " +
+                                    "\nCity Name :" + City + " " + "\nState Name :" + State + " " +
+                                    "\nZip Code :" + Zipcode + " " + "\nPhoneNumber :" + PhoneNumber;
         }
     }
 }

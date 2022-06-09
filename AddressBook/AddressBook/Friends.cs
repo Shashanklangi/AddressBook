@@ -231,6 +231,21 @@ namespace AddressBook
                 Console.WriteLine("-----------------------------------------------------------");
             }
         }
+        public void ContactDetailsInFile()
+        {
+            string Write = @"E:\Bridgelabz\AddressBook\AddressBook\AddressBook\AddressBookFriend.txt";
+            using (StreamWriter streamWriter = File.AppendText(Write))
+            {
+                foreach (var item in list)
+                {
+                    streamWriter.WriteLine(item);
+                }
+                streamWriter.Close();
+            }
+            string InputFile = @"E:\Bridgelabz\AddressBook\AddressBook\AddressBook\AddressBookFriend.txt";
+            string file = File.ReadAllText(InputFile);
+            Console.WriteLine(file);
+        }
     }
 }
 

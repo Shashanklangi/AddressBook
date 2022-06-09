@@ -1,0 +1,16 @@
+First Name :a 
+Last Name :a 
+Email ID :a 
+Address :a 
+City Name :a 
+State Name :a 
+Zip Code :a 
+PhoneNumber :a
+First Name :s 
+Last Name :s 
+Email ID :s 
+Address :s 
+City Name :s 
+State Name :s 
+Zip Code :s 
+PhoneNumber :s

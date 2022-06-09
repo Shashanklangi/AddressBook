@@ -30,6 +30,7 @@ namespace AddressBook
                             Console.WriteLine("7:Count Person by City and State");
                             Console.WriteLine("8:Sort by Person Name");
                             Console.WriteLine("9:Sort by City Name");
+                            Console.WriteLine("10:To read and write file.");
                             Console.WriteLine("0:To Exit");
                             int select1 = Convert.ToInt32(Console.ReadLine());
                             {
@@ -68,6 +69,9 @@ namespace AddressBook
                                         continue;
                                     case 9:
                                         family.SortByCity();
+                                        continue;
+                                    case 10:
+                                        family.ContactDetailsInFile();
                                         break;
                                     default:
                                         Console.WriteLine("Have a Nice Day");
@@ -92,7 +96,8 @@ namespace AddressBook
                             Console.WriteLine("6:To View by City Name");
                             Console.WriteLine("7:Count Person by City and State");
                             Console.WriteLine("8:Sort by Person name");
-                            Console.WriteLine("8:Sort by City name");
+                            Console.WriteLine("9:Sort by City name");
+                            Console.WriteLine("10:To read and write file");
                             Console.WriteLine("0:To Exit");
                             int select2 = Convert.ToInt32(Console.ReadLine());
                             {
@@ -131,6 +136,9 @@ namespace AddressBook
                                         continue;
                                     case 9:
                                         friend.SortByCity();
+                                        continue;
+                                    case 10:
+                                        friend.ContactDetailsInFile();
                                         break;
                                     default:
                                         Console.WriteLine("Have a Nice Day");
